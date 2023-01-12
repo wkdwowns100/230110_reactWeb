@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+  z-index: 99;
+}
+:root {
+  --swiper-theme-color: #fff;
+}
+img {
+  width: 100%;
+}

@@ -1,0 +1,152 @@
+.Toggle {
+  z-index: 9999;
+  position: absolute;
+  top: 15px;
+  right: 95px;
+  cursor: pointer;
+  #toggle_btn {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 30px;
+    height: 23px;
+    overflow: hidden;
+  }
+  #toggle_btn span {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    left: 0;
+    transition: 0.4s;
+    text-indent: -9999px;
+  }
+  #toggle_btn .bar1 {
+    top: 0;
+    transform-origin: top left;
+  }
+  #toggle_btn .bar2 {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #toggle_btn .bar3 {
+    bottom: 0;
+    transform-origin: bottom left;
+  }
+}
+/* 버튼 클릭 */
+
+.btnOn .bar1 {
+  top: 0;
+  transform: rotate(45deg) translateX(14px) translateY(-14px);
+}
+.btnOn .bar3 {
+  bottom: 0;
+  transform: rotate(-45deg) translateX(14px) translateY(14px);
+}
+
+// 내용
+.modalArticle {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  background-color: #fff;
+  opacity: 0;
+  transition: 0.2s;
+  transform: translateY(100vh);
+  .ModalNav {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: calc(50% - 30vw);
+    width: 60vw;
+    transform: translateX(1000px);
+    opacity: 0;
+    transition: 1s;
+
+    .title {
+      font-weight: bolder;
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
+    .bar {
+      display: block;
+      height: 1px;
+      text-indent: -9999px;
+      background-color: #000;
+      width: 60px;
+      margin-bottom: 20px;
+    }
+    .modalDivide {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      padding-top: 20px;
+    }
+    .pageLink {
+      h2 {
+        margin: 0;
+        font-weight: 400;
+        font-size: 30px;
+        padding: 15px 0;
+      }
+      .menuList {
+        font-size: 30px;
+        width: 100%;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding-bottom: 20px;
+        a {
+          color: #555;
+          padding-right: 25px;
+          font-size: 17px;
+        }
+      }
+    }
+    .modalRight {
+      text-align: right;
+      h2 {
+        font-weight: 400;
+        margin: 0;
+        margin-top: 20px;
+        padding: 0;
+        font-size: 25px;
+      }
+      h3 {
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        font-size: 19px;
+      }
+      p {
+        font-weight: 400;
+        margin: 35px 0;
+        padding: 0;
+        font-size: 19px;
+      }
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        a {
+          margin: 10px 5px;
+          display: inline-block;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+.modalOn {
+  opacity: 1;
+  transform: translateY(0);
+  .navOn {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

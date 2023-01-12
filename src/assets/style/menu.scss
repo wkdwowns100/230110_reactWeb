@@ -1,0 +1,62 @@
+.headerNav {
+  margin: 0 auto;
+  height: 100px;
+  transition: .5s;
+  font-weight: 300;
+  overflow: hidden;
+    &:hover {
+      height: 320px;
+      color: #aaa;
+    }
+  .NavMenu {
+    z-index: 999;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 900px;    
+    .largeMenu {
+      width: 180px;
+      transition: .4s;
+      &:hover {
+        color: #000;
+        .underline {
+          display: inline-block;
+        }        
+      } 
+      .menuList {
+        display: inline-block;
+        height: 80px;
+        padding: 20px 10px 0;
+        margin-bottom: 20px;
+        line-height: 60px;
+        border: none;
+        &:hover {
+          border-bottom: 1px solid #000;
+        }
+      }
+      .smallMenu {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        padding-bottom: 20px;
+        width: 100%;
+        li {
+          width: 100%;
+          height: 31px;
+          a {
+            font-size: 14px;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      a {
+        font-size: 17px;
+      }    
+    }
+  }
+}
